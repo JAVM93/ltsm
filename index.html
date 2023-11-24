@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Servidor Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #333;
+    }
+    #changingText {
+      color: black;
+      transition: color 0.5s;
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://s3.amazonaws.com/phidias-api-1/liceotaller/people/5260/uploads/LOGO+LTSM+2.png" class="fluid" alt="Imagen" width="300">
+  <h1 id="changingText">Servidor Web</h1>
+
+  <footer>
+    <a href="https://liceotallersanmiguel.edu.co">liceotallersanmiguel.edu.co</a>
+  </footer>
+
+  <script>
+    // Función para cambiar el color del texto
+    function changeTextColor() {
+      var text = document.getElementById("changingText");
+      text.style.color = (text.style.color === "black") ? "green" : "black";
+    }
+
+    // Cambiar de negro a verde cada cierto tiempo (5 segundos)
+    setInterval(changeTextColor, 5000);
+  </script>
+</body>
+</html>
